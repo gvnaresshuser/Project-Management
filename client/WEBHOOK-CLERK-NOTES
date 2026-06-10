@@ -1,0 +1,165 @@
+To configure Clerk webhooks for your local development environment, you'll need a **public URL** that forwards requests to your local Express server. The easiest way is using **ngrok**.
+
+## Step 1: Install ngrok
+
+Download from:
+
+[ngrok Downloads](https://ngrok.com/download?utm_source=chatgpt.com)
+
+Or install via npm:
+
+```bash
+npm install -g ngrok
+```
+
+---
+
+## Step 2: Start Your Backend
+
+If your Express server runs on:
+
+```text
+http://localhost:5000
+```
+
+start it:
+
+```bash
+npm run dev
+```
+
+---
+
+## Step 3: Start ngrok
+
+Open a new terminal:
+
+```bash
+ngrok http 5000
+```
+
+You'll get something like:
+
+```text
+Forwarding
+https://abc123.ngrok-free.app -> http://localhost:5000
+```
+
+Copy the HTTPS URL.
+
+---
+
+## Step 4: Create Clerk Webhook
+
+Go to:
+
+[Clerk Dashboard](https://dashboard.clerk.com?utm_source=chatgpt.com)
+
+Navigate:
+
+```text
+Configure
+   ↓
+Webhooks
+   ↓
+Add Endpoint
+```
+
+Endpoint URL:
+
+```text
+https://abc123.ngrok-free.app/api/webhooks/clerk
+```
+
+Replace with your ngrok URL.
+
+---
+
+## Step 5: Select Events
+
+Enable:
+
+```text
+user.created
+user.updated
+organization.created
+organizationMembership.created
+organizationMembership.deleted
+```
+
+Click **Create**.
+
+---
+
+## Step 6: Copy Signing Secret
+
+After creating the webhook, Clerk will show:
+
+```text
+Webhook Secret
+```
+
+Example:
+
+```text
+whsec_xxxxxxxxxxxxxxxxxxxxx
+```
+
+Add it to your `.env`:
+
+```env
+CLERK_WEBHOOK_SECRET=whsec_xxxxxxxxxxxxxxxxxxxxx
+```
+
+---
+
+## Step 7: Create Express Route
+
+Example:
+
+```javascript
+import express from "express";
+
+const router = express.Router();
+
+router.post("/clerk", async (req, res) => {
+  console.log("Webhook Received");
+  console.log(req.body);
+
+  res.status(200).json({ success: true });
+});
+
+export default router;
+```
+
+Register it:
+
+```javascript
+app.use("/api/webhooks", webhookRoutes);
+```
+
+---
+
+## Step 8: Test
+
+Create a new organization in your app.
+
+Your server terminal should show:
+
+```text
+Webhook Received
+organization.created
+```
+
+Once you see that, we can write the Prisma code to automatically insert records into your `users`, `workspaces`, and related tables.
+
+Can you show me your current backend route structure (especially `server.js` and any `routes` folder)? I can then provide the exact webhook file and Prisma insertion code for your project.
+
+==============================================================
+Account gvnaressh@gmail.com (Plan: Free) Update update available (version 3.39.7, Ctrl-U to update) Version 3.33.1 Region India (in) Latency 53ms Web Interface http://127.0.0.1:4040
+Forwarding https://8e96-2401-4900-88e1-c3c4-84ad-5f36-385a-3b0.ngrok-free.app -> http://localhost:500 Connections ttl opn rt1 rt5 p50 p90 0 0 0.00 0.00 0.00 0.00
+
+whsec_FSKuTIXIWrp/JdGz7KN73BPWL0xg2cLm
+
+INNGEST
+1:00:30

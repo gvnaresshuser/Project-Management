@@ -1,0 +1,83 @@
+https://youtu.be/7BTsepZ9xp8
+mern-auth
+
+3 Full-Stack-Project-Management-Project.zip
+https://youtu.be/50NN3d-Ne1U
+
+
+server/
+npm init -y
+npm i express cors dotenv nodemon jsonwebtoken mongoose bcryptjs nodemailer cookie-parser
+"type":"module"
+
+17:03:00
+mongodb atlas login
+https://account.mongodb.com/account/login
+
+create a cluster
+
+
+3 Full-Stack-Project-Management-Project.zip
+https://youtu.be/50NN3d-Ne1U
+github.com/GreatStackDev
+https://github.com/GreatStackDev
+https://github.com/GreatStackDev/project-management
+
+22:00 - clerk installation and setup
+Project-Mgt
+https://clerk.com/docs/react/getting-started/quickstart
+npm create vite@latest clerk-react -- --template react-ts
+cd clerk-react
+npm install
+npm install @clerk/react
+npm i react-is
+Add your Clerk Publishable Key to your .env file.
+VITE_CLERK_PUBLISHABLE_KEY=pk_test_Zmx5aW5nLWFtb2ViYS0xMS5jbGVyay5hY2NvdW50cy5kZXYk
+
+USE CORRECT IMPORTS -- import {  SignIn, useUser } from '@clerk/react'
+
+NEON DB:
+-------
+46:20
+neon.com
+
+src/main.tsx
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.tsx'
+import { ClerkProvider } from '@clerk/react'
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <ClerkProvider>
+      <App />
+    </ClerkProvider>
+  </StrictMode>,
+)
+
+src/App.tsx
+
+import './App.css'
+import { Show, SignInButton, SignUpButton, UserButton } from '@clerk/react'
+
+function App() {
+  return (
+    <>
+      <header>
+        <Show when="signed-out">
+          <SignInButton />
+          <SignUpButton />
+        </Show>
+        <Show when="signed-in">
+          <UserButton />
+        </Show>
+      </header>
+    </>
+  )
+}
+
+export default App
+
+Run your project
+npm run dev

@@ -1,0 +1,26 @@
+npm i react-is
+npm i react-is
+npm i react-is
+
+3 Full-Stack-Project-Management-Project.zip
+https://youtu.be/50NN3d-Ne1U
+github.com/GreatStackDev
+https://github.com/GreatStackDev
+https://github.com/GreatStackDev/project-management
+
+22:00 - clerk installation and setup
+Project-Mgt
+https://clerk.com/docs/react/getting-started/quickstart
+npm create vite@latest clerk-react -- --template react-ts
+cd clerk-react
+npm install
+npm install @clerk/react
+npm i react-is
+Add your Clerk Publishable Key to your .env file.
+VITE_CLERK_PUBLISHABLE_KEY=pk_test_Zmx5aW5nLWFtb2ViYS0xMS5jbGVyay5hY2NvdW50cy5kZXYk
+
+USE CORRECT IMPORTS -- import {  SignIn, useUser } from '@clerk/react'
+
+
+INNGEST
+1:00:30

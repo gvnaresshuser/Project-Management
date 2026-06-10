@@ -1,0 +1,67 @@
+npm run server
+
+## NEON DB:
+
+46:20
+neon.com
+Google
+gvnaressh@gmail.com
+Project-Mgt
+
+https://neon.com/docs/guides/prisma
+
+npm install @prisma/client@7.8.0
+npx prisma generate
+
+npm install @prisma/client @prisma/adapter-neon dotenv
+npm install prisma tsx --save-dev
+
+npx prisma generate
+npx prisma db push
+
+https://neon.com/docs/guides/prisma
+https://neon.com/docs/guides/prisma
+
+---
+
+E:\MURALI\PERN-ADVANCED-APPLICATION\Project-Management\server>npx prisma db push
+Loaded Prisma config from prisma.config.ts.
+
+Prisma schema loaded from prisma\schema.prisma.
+Datasource "db": PostgreSQL database "neondb", schema "public" at "ep-polished-rain-apccit3a.c-7.us-east-1.aws.neon.tech"
+
+Your database is now in sync with your Prisma schema. Done in 17.35s
+
+E:\MURALI\PERN-ADVANCED-APPLICATION\Project-Management\server>
+
+npm install ws
+npm install @prisma/adapter-neon@latest
+
+---
+
+E:\MURALI\PERN-ADVANCED-APPLICATION\Project-Management\server>npm list @prisma/adapter-neon
+server@1.0.0 E:\MURALI\PERN-ADVANCED-APPLICATION\Project-Management\server
+`-- @prisma/adapter-neon@7.8.0
+
+E:\MURALI\PERN-ADVANCED-APPLICATION\Project-Management\server>npm list @neondatabase/serverless
+server@1.0.0 E:\MURALI\PERN-ADVANCED-APPLICATION\Project-Management\server
++-- @neondatabase/serverless@1.0.2
+`-- @prisma/adapter-neon@7.8.0
+  `-- @neondatabase/serverless@1.0.2 deduped
+
+E:\MURALI\PERN-ADVANCED-APPLICATION\Project-Management\server>npm list prisma
+server@1.0.0 E:\MURALI\PERN-ADVANCED-APPLICATION\Project-Management\server
++-- @prisma/client@7.8.0
+| `-- prisma@7.8.0 deduped
+`-- prisma@7.8.0
+
+E:\MURALI\PERN-ADVANCED-APPLICATION\Project-Management\server>npm list @prisma/client
+server@1.0.0 E:\MURALI\PERN-ADVANCED-APPLICATION\Project-Management\server
+`-- @prisma/client@7.8.0
+
+---
+
+INNGEST
+1:00:30
+https://www.inngest.com/
+npm install inngest
