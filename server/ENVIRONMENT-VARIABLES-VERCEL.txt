@@ -1,0 +1,19 @@
+# Run Environment
+NODE_ENV = "development" #Change to "production" in deployment
+
+NODE_ENV = "production"
+CLERK_PUBLISHABLE_KEY="pk_test_Zmx5aW5nLWFtb2ViYS0xMS5jbGVyay5hY2NvdW50cy5kZXYk"
+CLERK_SECRET_KEY="sk_test_09z5boUdglENLoBHCG7Wx4IwwKcjRMAMIcD8nmR1P6"
+CLERK_WEBHOOK_SECRET=whsec_Z139AuDvfuPizoTrEAHdixJgEjFRP1Sj
+DATABASE_URL = "postgresql://neondb_owner:npg_WyMXvu3w5DeZ@ep-polished-rain-apccit3a-pooler.c-7.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+DIRECT_URL = "postgresql://neondb_owner:npg_WyMXvu3w5DeZ@ep-polished-rain-apccit3a.c-7.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+INNGEST_EVENT_KEY = "9M5cBhM8JkybbzHjuF3NG3rBIhmArEk6qRqrDhACcwrBHNkAwS5V242sVqafLJ7D1Z1A4QbJzFznek2mpd7l1w"
+INNGEST_SIGNING_KEY = "signkey-prod-06dca8346dfbc8917f2db88f82c1f73d0595940e4522c3c3e2ddf805b567f6e2" 
+SENDER_EMAIL="gvnaressh@gmail.com"
+SMTP_USER="a06387001@smtp-brevo.com"
+SMTP_PASS="bskG4Nsw3Vdw56n"
+
+
+
+ "inngest": "^3.44.2",
+  "inngest": "3.54.0",
